@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hoffhannisyan.github.io/javascript-tetris/sitemap.xml
