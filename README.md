@@ -1,149 +1,139 @@
-# Tetris Game - Pure JavaScript Implementation
+# Tetris Game - Pure JavaScript
 
-A complete implementation of the classic Tetris game built entirely with vanilla **HTML5**, **CSS3**, and **JavaScript** - no external libraries or frameworks required. This project serves as an excellent educational resource for students learning game development, object-oriented programming, and modern JavaScript concepts.
+A classic Tetris game built with vanilla **HTML5**, **CSS3**, and **JavaScript**. No frameworks, no libraries - just good old JavaScript. Great for learning game development and modern JavaScript.
 
 ## How to Play
 
 ### Play Online
-You can play the game directly in your browser without downloading anything:
+
+Want to jump right in? Just click the link below:
 
 **[🎮 Play Tetris Online](https://hoffhannisyan.github.io/javascript-tetris)**
 
-### Play Locally
-To play the game locally, follow these steps:
+### Run Locally
 
-1. Clone the repository or download the ZIP file
-2. If downloaded as ZIP, extract the files
-3. Navigate to the project directory
-4. Open `index.html` in any modern web browser
-5. No additional installation or build process required!
+If you prefer to run it on your machine:
 
-### Game Controls
-- **Enter**: Start the game or restart after game over
-- **Space**: Pause/Resume the game
-- **Arrow Left** (←): Move tetromino left
-- **Arrow Right** (→): Move tetromino right
-- **Arrow Up** (↑): Rotate the tetromino clockwise
-- **Arrow Down** (↓): Soft drop (faster descent)
+1. Clone the repo or download the ZIP
+2. Extract if you downloaded the ZIP
+3. Find the project folder
+4. Open `index.html` in your browser
+5. That's it! No build steps or installations needed.
 
-### Objective
-Stack falling tetromino pieces to create complete horizontal lines. When a line is completed, it disappears and you earn points. The game speeds up as you progress through levels. The game ends when pieces reach the top of the playing field.
-## Browser Compatibility
+### Controls
 
-This game works in all modern browsers that support:
-- HTML5 Canvas API
-- ES6+ JavaScript features (classes, arrow functions, const/let)
-- CSS3 features
+- **Enter**: Start or restart the game
+- **Space**: Pause/unpause
+- **Arrow Left** (←): Move left
+- **Arrow Right** (→): Move right
+- **Arrow Up** (↑): Rotate piece
+- **Arrow Down** (↓): Drop faster
 
-## Educational Purpose
+### How to Win
 
-This Tetris implementation is specifically designed for learning and teaching purposes, demonstrating:
+Stack the falling pieces to make complete horizontal lines. When you fill a line, it disappears and you get points. The game gets faster as you level up. Game over when the pieces stack up to the top.
 
-- **Modern JavaScript ES6+ features**: Classes, private fields, static methods, and arrow functions
-- **Object-Oriented Programming**: Clean separation of concerns using MVC (Model-View-Controller) pattern
-- **HTML5 Canvas API**: 2D graphics rendering and animation techniques
-- **Game development fundamentals**: Game loops, collision detection, state management, and user input handling
-- **Clean code practices**: Proper encapsulation, meaningful naming conventions, and code organization
+## Browser Support
 
-## Technical Implementation Details
+Works in any modern browser that supports HTML5 Canvas, ES6+ JavaScript, and CSS3.
 
-### Core Technologies Used
-- **HTML5**: Semantic structure and Canvas element for game rendering
-- **CSS3**: Styling and responsive design principles
-- **JavaScript ES6+**: Modern language features and best practices
+## What You'll Learn
 
-### Key Programming Concepts Demonstrated
-- **Private class fields** (`#privateField`) for proper encapsulation
-- **Static constants** for configuration management
-- **Matrix operations** for tetromino rotation algorithms
-- **Collision detection** using coordinate-based boundary checking
-- **Timer-based game loops** with `setInterval` and dynamic speed calculation
-- **Event-driven programming** for keyboard input handling
-- **State management** for game flow control (start, pause, game over)
+This project is great for learning:
 
-### Game Features Implemented
-- Complete tetromino movement system (left, right, down, rotation)
-- Line clearing algorithm with proper scoring system
-- Progressive difficulty with increasing drop speed
-- Next piece preview functionality
-- Pause and resume gameplay
-- Game over detection and restart capability
-- Responsive keyboard controls
+- **Modern JavaScript**: ES6+ features like classes, arrow functions, and private fields
+- **OOP Design**: Clean code structure using the MVC pattern
+- **Canvas API**: How to draw and animate 2D graphics
+- **Game Dev Basics**: Game loops, collision detection, state management, and handling user input
+- **Clean Code**: Good practices for organizing and writing maintainable code
 
-## Code Architecture
+## Tech Stack
 
-The game follows the **MVC (Model-View-Controller)** design pattern for clean separation of concerns:
+- **HTML5**: Canvas element for rendering the game
+- **CSS3**: Styling and layout
+- **JavaScript ES6+**: All the game logic
 
-### 🎮 Controller Class
-- **Purpose**: Manages user input and coordinates between Game and View
-- **Key responsibilities**:
-  - Keyboard event handling
-  - Game timing and drop intervals
-  - Game state transitions (start, pause, restart)
-  - Speed calculation based on level progression
+## Key Concepts Used
 
-### 🎯 Game Class (Model)
-- **Purpose**: Contains all game logic and state management
-- **Key responsibilities**:
-  - Tetromino generation and management
-  - Collision detection algorithms
-  - Board state management
-  - Line clearing and scoring system
-  - Level progression logic
+- Private class fields for encapsulation
+- Static constants for game config
+- Matrix operations for rotating pieces
+- Collision detection with coordinate checking
+- Timer-based game loop with `setInterval`
+- Event-driven keyboard handling
+- State management for game flow
 
-### 🎨 View Class
-- **Purpose**: Handles all visual rendering using HTML5 Canvas
-- **Key responsibilities**:
-  - Canvas setup and management
-  - Game board rendering
-  - Tetromino piece visualization
-  - UI elements (score, level, next piece)
-  - Screen state rendering (start, pause, game over)
+## Features
 
-### Key Algorithms Implemented
+- Full movement system (left, right, down, rotate)
+- Line clearing with scoring
+- Progressive difficulty (speeds up as you level up)
+- Preview of next piece
+- Pause and resume
+- Game over detection and restart
+- Keyboard controls
 
-1. **Tetromino Rotation**: Matrix rotation algorithm for 90-degree clockwise/counterclockwise rotation
-2. **Collision Detection**: Boundary checking for walls, floor, and existing pieces
-3. **Line Clearing**: Row completion detection and removal with proper array manipulation
-4. **Scoring System**: Progressive scoring based on lines cleared and current level
-5. **Drop Speed Calculation**: Dynamic timing adjustment based on game level
+## Code Structure
 
-## Learning Outcomes
+The game uses the **MVC pattern** to keep things organized:
 
-By studying and working with this code, students will learn:
+### 🎮 Controller
+Handles user input and coordinates between Game and View
+- Manages keyboard events
+- Controls game timing
+- Handles state transitions (start, pause, restart)
+- Calculates speed based on level
 
-- How to structure a complete JavaScript application using classes
-- Canvas API fundamentals for 2D game development
-- Game loop implementation and timing management
-- State management patterns in interactive applications
-- Event handling and user input processing
-- Algorithm implementation (rotation, collision detection)
-- Object-oriented design principles in JavaScript
+### 🎯 Game (Model)
+Contains all the game logic
+- Generates and manages pieces
+- Detects collisions
+- Manages the board state
+- Handles line clearing and scoring
+- Tracks level progression
 
-## Code Quality Features
+### 🎨 View
+Handles all the rendering
+- Sets up the canvas
+- Draws the game board
+- Renders the pieces
+- Shows UI elements (score, level, next piece)
+- Displays different screens (start, pause, game over)
 
-- **No external dependencies**: Pure vanilla JavaScript implementation
-- **Modern ES6+ syntax**: Uses latest JavaScript features appropriately
-- **Clean code principles**: Readable, maintainable, and well-documented
-- **Proper error handling**: Graceful handling of edge cases
-- **Performance optimized**: Efficient rendering and game loop implementation
+## Main Algorithms
+
+1. **Piece Rotation**: Rotates the matrix 90 degrees
+2. **Collision Detection**: Checks boundaries and existing pieces
+3. **Line Clearing**: Finds complete rows and removes them
+4. **Scoring**: Calculates points based on lines cleared and level
+5. **Speed Control**: Adjusts drop speed as levels increase
+
+## What You Get
+
+- No dependencies - pure vanilla JavaScript
+- Modern ES6+ syntax
+- Clean, readable code
+- Handles edge cases properly
+- Optimized for performance
 
 ## Contributing
 
-Contributions are welcome! This project is designed to be educational, so improvements that enhance learning value are especially appreciated. Please check out the [contributing guidelines](./.github/CONTRIBUTING.md) before submitting pull requests.
+Want to improve it? Contributions are welcome! Since this is an educational project, improvements that help others learn are especially appreciated.
 
-### Areas for Contribution
-- Code documentation and comments
-- Performance optimizations
-- Additional game features (hold piece, ghost piece, etc.)
-- Mobile touch controls
-- Visual enhancements
-- Accessibility improvements
+Some ideas:
+- Better documentation
+- Performance tweaks
+- New features (hold piece, ghost piece, etc.)
+- Touch controls for mobile
+- Visual improvements
+- Accessibility features
+
+Check out the [contributing guidelines](./.github/CONTRIBUTING.md) before submitting.
 
 ## License
 
-This project is open source under the [MIT License](./LICENSE), making it free to use for educational purposes, personal projects, and learning.
+MIT License - free to use for learning, personal projects, or whatever you want. See the [LICENSE](./LICENSE) file.
 
 ---
 
-**Perfect for**: JavaScript students, game development beginners, coding bootcamps, computer science courses, and anyone interested in learning clean, modern JavaScript through a practical project.
+**Good for**: Learning JavaScript, getting into game dev, coding bootcamps, CS courses, or anyone who wants to see how a real game works under the hood.
